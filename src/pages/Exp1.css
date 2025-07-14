@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.button {
+  @apply relative flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-gray-900;
+  /* clip-path: circle(50%); */
+}
+
+.on-hold {
+  @apply absolute flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-red-300 text-gray-900;
+  clip-path: inset(0px 100% 0px 0px);
+  transition: clip-path 0.2s linear;
+}
+
+.button:active .on-hold {
+  @apply bg-red-500;
+  clip-path: inset(0px 0px 0px 0px);
+  transition: clip-path 1.5s linear;
+}
